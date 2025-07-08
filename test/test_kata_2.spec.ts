@@ -1,6 +1,6 @@
 ﻿
-import assert from 'assert';
-import {input} from "../src/2_kata";
+import {assert} from 'chai';
+import {input} from "../src/2_kata.js";
 
 describe('kata two', function () {
     it('given 0 items can accept an input of how many items, cost per item, state code, and calculate total value',

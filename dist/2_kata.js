@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.input = void 0;
-const input = (commands) => {
+export const input = (commands) => {
     let totalCost = +commands[0] * +commands[1];
     const volumeDiscount = [
         { volume: 50000, discount: 0.15 },
@@ -26,4 +23,3 @@ const input = (commands) => {
     };
     return totalCost * (1 + stateTaxes[commands[2]] / 100);
 };
-exports.input = input;

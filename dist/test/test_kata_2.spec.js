@@ -1,10 +1,5 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const assert_1 = __importDefault(require("assert"));
-const _2_kata_1 = require("../src/2_kata");
+import { assert } from 'chai';
+import { input } from "../src/2_kata.js";
 describe('kata two', function () {
     it('given 0 items can accept an input of how many items, cost per item, state code, and calculate total value', function () {
         const commands = [
@@ -12,8 +7,8 @@ describe('kata two', function () {
             "5",
             "NV"
         ];
-        const totalCost = (0, _2_kata_1.input)(commands);
-        assert_1.default.equal(totalCost, 0);
+        const totalCost = input(commands);
+        assert.equal(totalCost, 0);
     });
     [
         { state: "NV", multiplier: 1.08 },
@@ -28,8 +23,8 @@ describe('kata two', function () {
             "5",
             state
         ];
-        const totalCost = (0, _2_kata_1.input)(commands);
-        assert_1.default.equal(totalCost, 5 * multiplier);
+        const totalCost = input(commands);
+        assert.equal(totalCost, 5 * multiplier);
     }));
     [
         { amount: "1000", discount: 0.03 },
@@ -43,7 +38,7 @@ describe('kata two', function () {
             amount,
             "NV"
         ];
-        const totalCost = (0, _2_kata_1.input)(commands);
-        assert_1.default.equal(totalCost, +amount * (1 - discount) * (1.08));
+        const totalCost = input(commands);
+        assert.equal(totalCost, +amount * (1 - discount) * (1.08));
     }));
 });
