@@ -1,4 +1,8 @@
-﻿Kata 1: https://jskatas.org/katas/es6/language/generator/yield/
+﻿# Kata 1
+
+https://jskatas.org/katas/es6/language/generator/yield/
+
+# Kata 2
 
 Product
 Accept 3 inputs from the user:
@@ -24,3 +28,11 @@ Output the total price. Give a discount based on the total price, add state tax 
 | TX    | 6.25%    |
 | AL    | 4.00%    |
 | CA    | 8.25%    |
+
+# Kata 3 - PatternCraft
+
+from: https://www.codewars.com/collections/patterncraft  
+
+
+
+

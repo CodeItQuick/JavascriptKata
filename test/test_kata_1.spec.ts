@@ -1,6 +1,5 @@
-﻿
-import assert from 'assert';
-import HelloWorld, {helloWorldGenerator} from '../src/kata_one.js';
+﻿import { assert } from "chai";
+import HelloWorld, {helloWorldGenerator} from '../src/1_kata.js';
 
 describe('hello world kata', function () {
     it('should return hello world', function () {
