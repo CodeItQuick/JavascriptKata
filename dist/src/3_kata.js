@@ -11,7 +11,16 @@ export class Marine {
     attack(unit) {
     }
     alive() {
-        return false;
+        return true;
+    }
+    shoot(unit) {
+    }
+}
+export class Zealot {
+    attack(unit) {
+    }
+    alive() {
+        return true;
     }
     shoot(unit) {
     }

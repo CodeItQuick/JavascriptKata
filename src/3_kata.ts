@@ -21,7 +21,20 @@ export class Marine implements IUnit {
     }
 
     alive(): boolean {
-        return false;
+        return true;
+    }
+
+    shoot(unit: IUnit): void {
+
+    }
+}
+export class Zealot implements IUnit {
+    attack(unit: IUnit): void {
+
+    }
+
+    alive(): boolean {
+        return true;
     }
 
     shoot(unit: IUnit): void {
