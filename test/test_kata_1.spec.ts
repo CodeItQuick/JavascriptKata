@@ -20,7 +20,7 @@ describe('hello world kata', function () {
     });
     it('should use a generator function that returns done after three calls', () => {
         let sequence = helloWorldGenerator();
-        const firstCall = sequence.next()
+        const firstCall = sequence.next();
         const secondCall = sequence.next();
         const thirdCall = sequence.next();
 
