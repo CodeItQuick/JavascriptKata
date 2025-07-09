@@ -12,16 +12,25 @@ describe('can do battle', () => {
         marine.shoot(zergling);
 
         assert.equal(marine.alive(), true)
+        assert.equal(zergling.alive(), false)
     })
     it('the vile zerg zergling will battle the epic protos zealot', () => {
         const zealot = new Zealot();
         const zergling = new Zergling();
         zergling.run(zealot);
-        zealot.shoot(zergling);
+        zealot.claw(zergling);
 
         zergling.attack(zealot);
-        zealot.shoot(zergling);
+        zealot.claw(zergling);
 
         assert.equal(zealot.alive(), true)
+    })
+    it('the vile zerg zergling cannot hit a unit it has not run at', () => {
+        const zealot = new Zealot();
+        const zergling = new Zergling();
+
+        zergling.attack(zealot);
+
+        assert.equal(zealot.hitpointBar(), "full")
     })
 })
