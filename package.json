@@ -6,6 +6,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha ./dist/test",
+    "test:coverage": "nyc --reporter=text mocha ./dist/test",
     "build": "tsc"
   },
   "private": true,
@@ -16,6 +17,7 @@
     "@types/node": "^24.0.10",
     "chai": "^5.2.0",
     "mocha": "^11.7.1",
+    "nyc": "^17.1.0",
     "typescript": "^5.8.3"
   },
   "dependencies": {
