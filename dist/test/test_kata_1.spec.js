@@ -1,4 +1,4 @@
-import { assert } from "chai";
+import assert from "node:assert";
 import HelloWorld, { helloWorldGenerator } from '../src/1_kata.js';
 describe('hello world kata', function () {
     it('should return hello world', function () {
