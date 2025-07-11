@@ -7,11 +7,13 @@
   "scripts": {
     "test": "mocha ./dist/test",
     "test:coverage": "nyc --reporter=text mocha ./dist/test",
+    "test:new-names": "stryker run",
     "build": "tsc"
   },
   "private": true,
   "devDependencies": {
     "@stryker-mutator/mocha-runner": "^9.0.1",
+    "@types/babel__core": "^7.20.5",
     "@types/chai": "^5.2.2",
     "@types/mocha": "^10.0.10",
     "@types/node": "^24.0.10",
@@ -21,6 +23,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@stryker-mutator/api": "^9.0.1",
     "ts-node": "^10.9.2"
   }
 }
