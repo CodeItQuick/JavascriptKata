@@ -5,9 +5,9 @@
   "type": "module",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha ./dist/test",
-    "test:coverage": "nyc --reporter=text mocha ./dist/test",
-    "test:new-names": "stryker run",
+    "test": "mocha ./dist/test/folder_1/",
+    "test:coverage": "nyc --reporter=text mocha ./dist/test/folder_1/",
+    "test:stryker": "stryker run",
     "build": "tsc"
   },
   "private": true,
