@@ -3,6 +3,9 @@ import {assert} from 'chai';
 import {input} from "../../src/folder_1/2_kata.js";
 
 describe('kata two', function () {
+    beforeEach(function(done){
+        return setTimeout(() => done(),250);
+    });
     it('given 0 items can accept an input of how many items, cost per item, state code, and calculate total value',
         function () {
         const commands = [

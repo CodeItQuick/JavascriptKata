@@ -6,9 +6,10 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha ./dist/test/folder_1/",
-    "test:coverage": "nyc --reporter=text mocha ./dist/test/folder_1/",
+    "test:coverage": "nyc --reporter=text mocha ./dist/test/folder_1/ ./dist/test/folder_2/",
     "test:stryker": "stryker run",
-    "build": "tsc"
+    "build": "tsc",
+    "breakup_mutation_json": "node .\\dist\\break_up_mutation_json"
   },
   "private": true,
   "devDependencies": {
@@ -23,6 +24,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@ast-grep/napi": "^0.38.7",
     "@stryker-mutator/api": "^9.0.1",
     "ts-node": "^10.9.2"
   }

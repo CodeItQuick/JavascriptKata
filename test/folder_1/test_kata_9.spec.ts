@@ -2,6 +2,9 @@
 import { Zergling, Marine, Zealot } from '../../src/folder_1/9_kata.js';
 
 describe('can do battle three', () => {
+    beforeEach(function(done){
+        return setTimeout(() => done(),250);
+    });
     it('the vile zerg zergling will battle the epic terran marine', () => {
         const marine = new Marine();
         const zergling = new Zergling();

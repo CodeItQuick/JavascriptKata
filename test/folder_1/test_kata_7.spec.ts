@@ -2,6 +2,9 @@
 import HelloWorld, {helloWorldGenerator} from '../../src/folder_1/7_kata.js';
 
 describe('hello world kata three', function () {
+    beforeEach(function(done){
+        return setTimeout(() => done(),250);
+    });
     it('should return hello world', function () {
         assert.equal(HelloWorld(), "Hello World");
     });

@@ -9,21 +9,24 @@ Object.keys(mutation.files).forEach((file, idx) => {
         const mutatedTests = new Set([...(killedBy || []), ...(coveredBy || [])]);
         mutatedTests.forEach(testId => {
             if (byTestNumber[file] === undefined) {
-                byTestNumber[file] = testId
+                byTestNumber[file] = { [testId]: [] }
             }
-            if (byTestNumber[testId] === undefined) {
-                byTestNumber[testId] = [mutation.files[file].mutants[idx]]
+            if (byTestNumber[file][testId] === undefined) {
+                byTestNumber[file][testId] = [mutation.files[file].mutants[idx]]
             } else {
-                byTestNumber[testId].push(mutation.files[file].mutants[idx])
+                byTestNumber[file][testId].push(mutation.files[file].mutants[idx])
             }
         })
     });
 
 
 });
-Object.keys(byTestNumber).forEach((testId, idx) => {
-    console.log(byTestNumber[testId])
-    const fileParts = byTestNumber[testId].split(',');
-    console.log(fileParts)
-    fs.writeFileSync(`./mutations/${fileParts[2]}/test_${idx}.json`, JSON.stringify(byTestNumber[testId]));
+Object.keys(byTestNumber).forEach((fileId, idx) => {
+    if (byTestNumber[fileId] !== undefined) {
+        const testNumber = Object.keys(byTestNumber[fileId]).map(x => x);
+        testNumber.forEach(testNum => {
+            fs.writeFileSync(`./mutations/kata_${idx + 1}/test_${testNum}.json`,
+                JSON.stringify(byTestNumber[fileId][testNum]));
+        })
+    }
 })

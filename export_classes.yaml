@@ -1,0 +1,12 @@
+﻿rules:
+  - id: find-exported-classes
+    pattern: |
+      export class $CLASS_NAME implements IUnit {
+        $BODY
+      }
+    language: typescript
+    message: Found exported class that needs to be separated
+    severity: warning
+    metadata:
+      description: "Identifies exported classes implementing IUnit interface"
+      category: "matching"

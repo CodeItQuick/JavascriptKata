@@ -1,0 +1,14 @@
+1347d28 mutation tests and coding agents
+61b6816 mutation tests and coding agents
+5465fd0 mutation tests and coding agents
+acc2d99 add code coverage which is at 100 percent
+56d0c52 add mutation testing
+3ba641f bunch of stuff working
+6a316ca bunch of stuff working
+658fe75 add third unit type
+150ccf9 typescript etc now works
+9090620 typescript installed and first test failing for starcraft kata
+a370fc4 add third kata
+d377f5d add more katas
+7762825 starter with first kata done
+24bee51 add gitignore
