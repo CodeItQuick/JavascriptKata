@@ -26,4 +26,41 @@ describe('can do battle', () => {
         zergling.attack(zealot);
         assert.equal(zealot.hitpointBar(), "full");
     });
+    it('should verify Zergling closeUnits is initialized as empty array', () => {
+        const zergling = new Zergling();
+        assert.isArray(zergling.closeUnits);
+        assert.lengthOf(zergling.closeUnits, 0);
+    });
+    it('should test Zergling.alive() returns false when hitpoints are 0 or less', () => {
+        const zergling = new Zergling();
+        zergling.hurt(1);
+        assert.equal(zergling.alive(), false);
+        zergling.hurt(1);
+        assert.equal(zergling.alive(), false);
+    });
+    it('should test Marine.alive() always returns true (even if hitpoints are 0)', () => {
+        const marine = new Marine();
+        marine.hurt(2);
+        assert.equal(marine.alive(), true);
+    });
+    it('should test hurt method for negative and zero damage', () => {
+        const zergling = new Zergling();
+        zergling.hurt(0);
+        assert.equal(zergling.hitpoints, 1);
+        zergling.hurt(-1);
+        assert.equal(zergling.hitpoints, 2);
+    });
+    it('should test Zergling cannot attack if closeUnits is empty', () => {
+        const marine = new Marine();
+        const zergling = new Zergling();
+        zergling.attack(marine);
+        assert.equal(marine.hitpoints, 2);
+    });
+    it('should test Marine attack does not affect already dead units', () => {
+        const marine = new Marine();
+        const zergling = new Zergling();
+        zergling.hurt(1);
+        marine.attack(zergling);
+        assert.equal(zergling.hitpoints, 0);
+    });
 });
