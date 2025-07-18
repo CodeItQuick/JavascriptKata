@@ -10,11 +10,14 @@ Do not read the mutation.json file. Instead, read a single file from the `mutati
 Make sure you perform the instructions for each file in the `src/folder_1` directory.
 
 
-1. For every file in the `src/folder_1` directory:
+1. For the file `src/folder_1/3_kata.ts`:
     - Open the file and extract production code information.
-    - If the file is a test file, extract test information.
     - Retrieve mutation testing results for the file.
+2. For the file `test/folder_1/test_kata_3.spec.ts`    
     - Retrieve the test cases that are currently present for this file.
-    - Paste the bug results into `test/bugs_found_folder_1` directory, creating a new file named `bugs_kata_X.md`, where `X` is the file number (1, 2, 3, or 4).
-    - Paste the test cases into `test/bugs_found_folder_1` directory, creating a new file named `test_cases_X.ts`, where `X` is the file number (1, 2, 3, or 4).
-    - for each test case, only write the `describe` and `it` blocks, without the actual test implementation.
+3. For the file `mutations/3_kata/tests.json`
+    - Read mutation information for the kata
+4. Analyze the data from steps 1, 2 and 3:
+    - Identify the mutations that were not covered by the existing tests.
+    - Suggest new test names based on the uncovered mutations.
+5. Write the new tests in `test/folder_1/test_kata_3_missing.spec.ts`
