@@ -1,9 +1,10 @@
 ﻿import {assert} from "chai";
 import { Zergling, Marine, Zealot } from '../../src/folder_2/12_kata.js';
+import delay from "./delay.js";
 
 describe('can do battle four', () => {
     beforeEach(function(done){
-        return setTimeout(() => done(),250);
+        return setTimeout(() => done(), delay);
     });
     it('the vile zerg zergling will battle the epic terran marine', () => {
         const marine = new Marine();

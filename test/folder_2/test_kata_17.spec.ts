@@ -1,10 +1,11 @@
 ﻿
 import {assert} from 'chai';
 import {input} from "../../src/folder_2/17_kata.js";
+import delay from "./delay.js";
 
 describe('kata two six', function () {
     beforeEach(function(done){
-        return setTimeout(() => done(),250);
+        return setTimeout(() => done(), delay);
     });
     it('given 0 items can accept an input of how many items, cost per item, state code, and calculate total value',
         function () {

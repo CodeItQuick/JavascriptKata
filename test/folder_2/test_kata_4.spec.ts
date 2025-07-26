@@ -1,9 +1,10 @@
 ﻿import assert from "node:assert";
 import HelloWorld, {helloWorldGenerator} from '../../src/folder_2/4_kata.js';
+import delay from "./delay.js";
 
 describe('hello world kata two', function () {
     beforeEach(function(done){
-        return setTimeout(() => done(),250);
+        return setTimeout(() => done(), delay);
     });
     it('should return hello world', function () {
         assert.equal(HelloWorld(), "Hello World");

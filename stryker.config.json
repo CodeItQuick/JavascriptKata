@@ -14,5 +14,8 @@
   "buildCommand": "npm run build",
   "mochaOptions": {
     "spec": ["dist/**/*.spec.js"]
-  }
+  },
+  "mutate": [
+    "dist/src/**/*.js"
+  ]
 }

@@ -17,10 +17,11 @@ import {
     Marine15, Zealot15, Zergling15,
     Marine16, Zealot16, Zergling16
 } from "../../src/folder_2/19_kata.js";
+import delay from "./delay.js";
 
 describe('can do battle eight', () => {
     beforeEach(function(done){
-        return setTimeout(() => done(),250);
+        return setTimeout(() => done(), delay);
     });
     it('the vile zerg zergling will battle the epic terran marine', () => {
         const marine = new Marine();

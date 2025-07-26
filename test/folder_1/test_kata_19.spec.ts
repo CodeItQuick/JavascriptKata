@@ -1,26 +1,59 @@
 ﻿import {assert} from "chai";
 import {
-    Marine, Zealot, Zergling,
-    Marine2, Zealot2, Zergling2,
-    Marine3, Zealot3, Zergling3,
-    Marine4, Zealot4, Zergling4,
-    Marine5, Zealot5, Zergling5,
-    Marine6, Zealot6, Zergling6,
-    Marine7, Zealot7, Zergling7,
-    Marine8, Zealot8, Zergling8,
-    Marine9, Zealot9, Zergling9,
-    Marine10, Zealot10, Zergling10,
-    Marine11, Zealot11, Zergling11,
-    Marine12, Zealot12, Zergling12,
-    Marine13, Zealot13, Zergling13,
-    Marine14, Zealot14, Zergling14,
-    Marine15, Zealot15, Zergling15,
-    Marine16, Zealot16, Zergling16
+    Marine,
+    Marine10,
+    Marine11,
+    Marine12,
+    Marine13,
+    Marine14,
+    Marine15,
+    Marine16,
+    Marine2,
+    Marine3,
+    Marine4,
+    Marine5,
+    Marine6,
+    Marine7,
+    Marine8,
+    Marine9,
+    Zealot,
+    Zealot10,
+    Zealot11,
+    Zealot12,
+    Zealot13,
+    Zealot14,
+    Zealot15,
+    Zealot16,
+    Zealot2,
+    Zealot3,
+    Zealot4,
+    Zealot5,
+    Zealot6,
+    Zealot7,
+    Zealot8,
+    Zealot9,
+    Zergling,
+    Zergling10,
+    Zergling11,
+    Zergling12,
+    Zergling13,
+    Zergling14,
+    Zergling15,
+    Zergling16,
+    Zergling2,
+    Zergling3,
+    Zergling4,
+    Zergling5,
+    Zergling6,
+    Zergling7,
+    Zergling8,
+    Zergling9
 } from "../../src/folder_1/19_kata.js";
+import delay from './delay.js';
 
 describe('can do battle eight', () => {
     beforeEach(function(done){
-        return setTimeout(() => done(),250);
+        return setTimeout(() => done(),delay);
     });
     it('the vile zerg zergling will battle the epic terran marine', () => {
         const marine = new Marine();
